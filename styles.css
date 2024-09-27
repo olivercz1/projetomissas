@@ -16,13 +16,17 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff; /* Fundo suave */
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     color: #333; /* Cor do texto principal */
 }
 
 /* Estilo do Header */
 header {
-    background: linear-gradient(135deg, #6b8e23 0%, #98fb98 100%); /* Verde suave em gradiente */
+    background: #6190E8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     text-align: center;
     padding: 1rem;
@@ -67,36 +71,14 @@ header h1 {
     color: #333;
     transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
-
-/* Estilo do Carrossel */
-.carrossel {
-    width: 80%; /* Ajuste a largura conforme necessário (porcentagem ou valor fixo) */
-    height: 300px; /* Aumente a altura para dar mais destaque */
-    overflow: hidden;
-    margin: 0 auto; /* Centraliza o carrossel */
-    position: relative;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+.carousel-inner img {
+    width: 100%; /* Mantém a largura total do contêiner */
+    max-width: 500px; /* Ajusta a largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 300px; /* Ajusta a altura máxima */
+    margin: 0 auto; /* Centraliza as imagens */
 }
 
-.carrossel .slides {
-    display: flex;
-    width: 300%; /* A largura continua proporcional ao número de imagens */
-    height: 100%; /* Mantém a altura consistente */
-    animation: slide 24s infinite;
-}
-
-.carrossel .slide {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.carrossel img {
-    width: 100%;
-    height: 100%; /* A imagem agora será redimensionada conforme a nova altura */
-    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
-    border-radius: 8px; /* Bordas arredondadas nas imagens do carrossel */
-}
 
 @keyframes slide {
     0% {
@@ -187,7 +169,10 @@ footer {
     text-align: center;
     margin: 2rem 0;
     padding: 1rem;
-    background-color: #3a6351;
+    background: #6190E8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: white;
     border-top: 4px solid #98fb98; /* Borda superior para destaque */
 }
