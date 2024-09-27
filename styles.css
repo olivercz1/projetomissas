@@ -4,128 +4,146 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+.logo img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px; /* Tamanho ajustado do brasão */
+    height: auto; /* Mantém a proporção */
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff; /* Fundo suave */
     color: #333; /* Cor do texto principal */
-  }
-  
-  header {
-    background-color: #3a6351; /* Verde suave */
+}
+
+/* Estilo do Header */
+header {
+    background: linear-gradient(135deg, #6b8e23 0%, #98fb98 100%); /* Verde suave em gradiente */
     color: white;
     text-align: center;
     padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .navbar {
-    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo da Navbar */
+.navbar {
+    background-color: #333; /* Fundo escuro */
     padding: 0.5rem 0;
-  }
-  
-  .navbar ul {
+    text-align: center;
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
-  }
-  
-  .navbar ul li {
+}
+
+.navbar ul li {
     margin: 0 15px;
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-  }
-  
-  .navbar ul li a:hover {
-    color: #d4af37; /* Dourado suave */
-  }
-  /* Estilo do Carrossel */
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #98fb98; /* Verde claro ao passar o mouse */
+    color: #333;
+}
+
+/* Estilo do Carrossel */
 .carrossel {
-    width: 100%;
-    max-width: 100px;
-    margin: 20px auto;
+    width: 80%; /* Ajuste a largura conforme necessário (porcentagem ou valor fixo) */
+    height: 200px; /* Ajuste a altura para diminuir o carrossel */
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .slides {
+    margin: 0 auto; /* Centraliza o carrossel */
+    position: relative;
+}
+
+.carrossel .slides {
     display: flex;
-    width: 300%;
-    animation: slide 10s infinite;
-  }
-  
-  .slide {
+    width: 300%; /* A largura continua proporcional ao número de imagens */
+    height: 100%; /* Mantém a altura consistente */
+    animation: slide 24s infinite;
+}
+
+.carrossel .slide {
     width: 100%;
     flex-shrink: 0;
-  }
-  
-  .slide img {
+}
+
+.carrossel img {
     width: 100%;
-    display: block;
-    object-fit: cover;
-  }
-  
-  @keyframes slide {
+    height: 100%; /* A imagem agora será redimensionada conforme a nova altura */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+}
+
+@keyframes slide {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     33% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     66% {
-      transform: translateX(-200%);
+        transform: translateX(-200%);
     }
     100% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
-  }
-  
-  
-  .intencao-oracao {
+}
+
+/* Estilo da Seção de Intenções de Oração */
+.intencao-oracao {
     background-color: #f9f9f9; /* Fundo bege claro */
     padding: 2rem;
     margin: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .intencao-oracao h2 {
+}
+
+.intencao-oracao h2 {
     color: #3a6351; /* Verde suave */
     margin-bottom: 1rem;
-  }
-  
-  .intencao-oracao p {
+}
+
+.intencao-oracao p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .intencao-oracao form {
+}
+
+.intencao-oracao form {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .intencao-oracao label {
+}
+
+.intencao-oracao label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #333;
     width: 100%;
     max-width: 400px;
-  }
-  
-  .intencao-oracao input,
-  .intencao-oracao textarea {
+}
+
+.intencao-oracao input,
+.intencao-oracao textarea {
     width: 100%;
     max-width: 400px;
     padding: 0.8rem;
@@ -133,9 +151,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-  }
-  
-  .intencao-oracao button {
+}
+
+.intencao-oracao button {
     background-color: #3a6351; /* Verde suave */
     color: white;
     padding: 0.8rem 2rem;
@@ -143,17 +161,50 @@
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-  }
-  
-  .intencao-oracao button:hover {
+}
+
+.intencao-oracao button:hover {
     background-color: #2c4c3b; /* Verde mais escuro */
-  }
-  
-  footer {
+}
+
+/* Estilo do Footer */
+footer {
     text-align: center;
     margin: 2rem 0;
     padding: 1rem;
     background-color: #3a6351;
     color: white;
-  }
-  
+}
+
+/* Estilos para a página de Podcast "Em Breve" */
+.em-construcao {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f0f0f0;
+}
+
+.em-construcao h2 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.em-construcao p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 25px;
+    margin: 0 auto;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 50%; /* Ajuste para simular a porcentagem de progresso */
+    background-color: #4CAF50;
+    height: 100%;
+}
