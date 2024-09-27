@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,16 +12,16 @@
       <div class="logo">
         <img src="./assents/padre-Pio (1).jpg" alt="Brasão" />
       </div>
-      <h1>Horários de Missas, Adorações e Confissões</h1>
+      <h1>Se informa Católico</h1>
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="intencao.html">Intenções de Oração</a></li>
-        <li><a href="#missas">Missas</a></li>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="missas.html">Missas</a></li>
         <li><a href="#adoracoes">Adorações</a></li>
         <li><a href="#confissoes">Confissões</a></li>
-        <li><a href="podcast.html">Podcast Católico</a></li>
+        <li><a href="./podcast.html">Podcast Católico</a></li>
+        <li><a href="./intencao.html">Intenções de Oração</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -30,11 +29,14 @@
 
   <!-- Carrossel de Imagens -->
   <div class="carrossel">
-    <div class="slides">
+    <div class="slides" id="slides">
       <div class="slide"><img src="./assents/5.jpg" alt="Imagem 1"></div>
-      <div class="slide"><img src="./assents/2=.jpg" alt="Imagem 2"></div>
-      <div class="slide"><img src="./assents/3=.jpg" alt="Imagem 3"></div>
+      <div class="slide"><img src="./assents/2.jpg" alt="Imagem 2"></div>
+      <div class="slide"><img src="./assents/3.jpg" alt="Imagem 3"></div>
     </div>
+    <!-- Botões do carrossel -->
+    <button id="prevBtn">Anterior</button>
+    <button id="nextBtn">Próximo</button>
   </div>
 
   <section class="boas-vindas">
@@ -62,6 +64,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Botão voltar ao topo -->
+  <button id="backToTopBtn">Voltar ao Topo</button>
 
   <footer id="contato">
     <div class="footer-content">
