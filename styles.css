@@ -15,15 +15,13 @@
 }
 
 body {
-    background-color: #f0f8ff; /* Cor de fundo para todo o site (exemplo: azul suave) */
-    color: #333; /* Cor do texto */
-    font-family: Arial, sans-serif;
+    background-color: #8400ff !important; 
 }
 
 /* Estilo do Header */
 header {
-   background-color: #ffffff;
-    color: white;
+   background-color: #2c4e7c;
+    color: rgb(0, 255, 68);
     text-align: center;
     padding: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -53,7 +51,7 @@ header h1 {
 }
 
 .navbar ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 16px;
