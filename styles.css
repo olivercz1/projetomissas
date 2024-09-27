@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f0f8ff; /* Fundo suave */
     color: #333; /* Cor do texto principal */
 }
@@ -26,7 +26,8 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #3a6351; /* Borda inferior para destaque */
 }
 
 header h1 {
@@ -57,22 +58,25 @@ header h1 {
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s; /* Transição adicionada */
     border-radius: 5px;
 }
 
 .navbar ul li a:hover {
     background-color: #98fb98; /* Verde claro ao passar o mouse */
     color: #333;
+    transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
 
 /* Estilo do Carrossel */
 .carrossel {
     width: 80%; /* Ajuste a largura conforme necessário (porcentagem ou valor fixo) */
-    height: 200px; /* Ajuste a altura para diminuir o carrossel */
+    height: 300px; /* Aumente a altura para dar mais destaque */
     overflow: hidden;
     margin: 0 auto; /* Centraliza o carrossel */
     position: relative;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 .carrossel .slides {
@@ -91,6 +95,7 @@ header h1 {
     width: 100%;
     height: 100%; /* A imagem agora será redimensionada conforme a nova altura */
     object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas nas imagens do carrossel */
 }
 
 @keyframes slide {
@@ -114,13 +119,14 @@ header h1 {
     padding: 2rem;
     margin: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .intencao-oracao h2 {
     color: #3a6351; /* Verde suave */
     margin-bottom: 1rem;
+    font-size: 2rem; /* Tamanho maior para destaque */
 }
 
 .intencao-oracao p {
@@ -151,8 +157,15 @@ header h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.3s; /* Transição na borda */
 }
 
+.intencao-oracao input:focus,
+.intencao-oracao textarea:focus {
+    border-color: #3a6351; /* Borda verde ao focar */
+}
+
+/* Estilo do Botão de Enviar */
 .intencao-oracao button {
     background-color: #3a6351; /* Verde suave */
     color: white;
@@ -161,10 +174,12 @@ header h1 {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transições adicionadas */
 }
 
 .intencao-oracao button:hover {
     background-color: #2c4c3b; /* Verde mais escuro */
+    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
 }
 
 /* Estilo do Footer */
@@ -174,6 +189,7 @@ footer {
     padding: 1rem;
     background-color: #3a6351;
     color: white;
+    border-top: 4px solid #98fb98; /* Borda superior para destaque */
 }
 
 /* Estilos para a página de Podcast "Em Breve" */
